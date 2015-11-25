@@ -126,8 +126,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    // Prevent OutOfMemory errors
 //    dexOptions {
+//        dexInProcess true
 //        incremental true
 //        javaMaxHeapSize "4g"
 //    }
