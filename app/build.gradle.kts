@@ -71,7 +71,7 @@ android {
 
     compileOptions {
         // Flag to enable support for the new language APIs
-        coreLibraryDesugaringEnabled = true
+        isCoreLibraryDesugaringEnabled = true
 
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -196,6 +196,8 @@ dependencies {
     implementation(Deps.ANDROIDX_ACTIVITY_KTX)
     implementation(Deps.ANDROIDX_FRAGMENT_KTX)
 
+    implementation(project(":sqlite-android"))
+
     // Play Service
     implementation(Deps.PLAYSERVICE_CORE)
 
@@ -248,7 +250,7 @@ dependencies {
 
     // Custom SQLite database
     // (for use of SqliteOrgSQLiteOpenHelperFactory in AppModule.kt)
-    //implementation(Deps.DBTOOLS_ROOM_SQLITE)
+    implementation(Deps.DBTOOLS_ROOM_SQLITE)
 
     // Debug Database (emulator: adb forward tcp:8080 tcp:8080) (https://github.com/amitshekhariitbhu/Android-Debug-Database)
     // Device: Look for "DebugDB" in logcat for the address
