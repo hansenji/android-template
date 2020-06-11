@@ -1,6 +1,8 @@
 // Versions for Dependencies AND Build Plugins
 const val KOTLIN_VERSION = "1.3.72"
 const val ANDROIDX_NAVIGATION_VERSION = "2.3.0-beta01"
+const val DAGGER_HILT_VERSION = "2.28-alpha"
+const val ANDROIDX_HILT_VERSION = "1.0.0-alpha01"
 
 object Deps {
     // Android (https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/buildSrc/src/main/kotlin/androidx/build/dependencies/Dependencies.kt)
@@ -54,6 +56,12 @@ object Deps {
     private const val DAGGER_VERSION = "2.28"
     const val DAGGER = "com.google.dagger:dagger:$DAGGER_VERSION"
     const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    const val HILT = "com.google.dagger:hilt-android:$DAGGER_HILT_VERSION"
+    const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:$DAGGER_HILT_VERSION"
+    const val HILT_TESTING = "com.google.dagger:hilt-android-testing:$DAGGER_HILT_VERSION"
+    const val ANDROIDX_HILT_VIEWMODEL = "androidx.hilt:hilt-lifecycle-viewmodel:$ANDROIDX_HILT_VERSION"
+    const val ANDROIDX_HILT_WORK = "androidx.hilt:hilt-work:$ANDROIDX_HILT_VERSION"
+    const val ANDROIDX_HILT_COMPILER = "androidx.hilt:hilt-compiler:$ANDROIDX_HILT_VERSION"
 
     // Inject helpers
     private const val FRAGMENT_INJECT_VERSION = "1.0.0"

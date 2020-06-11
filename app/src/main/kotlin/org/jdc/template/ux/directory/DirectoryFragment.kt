@@ -12,8 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.vikingsen.inject.fragment.FragmentInject
-import com.vikingsen.inject.viewmodel.savedstate.SavedStateViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 import me.eugeniomarletti.extras.bundle.BundleExtra
 import me.eugeniomarletti.extras.bundle.base.Int
 import org.jdc.template.R
@@ -21,14 +20,15 @@ import org.jdc.template.databinding.DirectoryFragmentBinding
 import org.jdc.template.ext.getScrollPosition
 import org.jdc.template.ui.fragment.BaseFragment
 import org.jdc.template.ui.menu.CommonMenu
+import javax.inject.Inject
 
+@AndroidEntryPoint
+class DirectoryFragment : BaseFragment() {
 
-class DirectoryFragment
-@FragmentInject constructor(
-    private val commonMenu: CommonMenu,
-    private val viewModelFactoryFactory: SavedStateViewModelFactory.Factory
-) : BaseFragment() {
-    private val viewModel: DirectoryViewModel by viewModels { viewModelFactoryFactory.create(this, null) }
+    @Inject
+    lateinit var commonMenu: CommonMenu
+
+    private val viewModel: DirectoryViewModel by viewModels()
     private lateinit var binding: DirectoryFragmentBinding
     private val adapter by lazy { DirectoryAdapter(viewModel) }
 

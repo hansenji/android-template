@@ -3,8 +3,8 @@ package org.jdc.template.ux.directory
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.asLiveData
-import com.squareup.inject.assisted.Assisted
-import com.vikingsen.inject.viewmodel.ViewModelInject
+import androidx.hilt.Assisted
+import androidx.hilt.lifecycle.ViewModelInject
 import org.jdc.template.model.db.main.directoryitem.DirectoryItem
 import org.jdc.template.model.repository.IndividualRepository
 import org.jdc.template.ui.viewmodel.BaseViewModel

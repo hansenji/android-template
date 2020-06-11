@@ -1,7 +1,7 @@
 package org.jdc.template.ux.startup
 
 import androidx.lifecycle.viewModelScope
-import com.vikingsen.inject.viewmodel.ViewModelInject
+import androidx.hilt.lifecycle.ViewModelInject
 import kotlinx.coroutines.launch
 import org.jdc.template.Analytics
 import org.jdc.template.BuildConfig

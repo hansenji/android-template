@@ -3,8 +3,8 @@ package org.jdc.template.ux.individualedit
 import androidx.databinding.ObservableField
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
-import com.squareup.inject.assisted.Assisted
-import com.vikingsen.inject.viewmodel.ViewModelInject
+import androidx.hilt.Assisted
+import androidx.hilt.lifecycle.ViewModelInject
 import kotlinx.coroutines.launch
 import org.jdc.template.R
 import org.jdc.template.delegates.requireSavedState

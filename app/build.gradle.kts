@@ -18,6 +18,7 @@ plugins {
     id("com.google.firebase.appdistribution")
     id("com.github.triplet.play") version "2.7.5"
     id("com.github.jk1.dependency-license-report") version "1.14"
+    id("dagger.hilt.android.plugin")
 }
 
 // Manifest version information
@@ -214,16 +215,11 @@ dependencies {
     implementation(Deps.TIMBER)
 
     // Inject
-    implementation(Deps.DAGGER)
-    kapt(Deps.DAGGER_COMPILER)
-
-    // Inject helpers
-    implementation(Deps.FRAGMENT_INJECT)
-    kapt(Deps.FRAGMENT_INJECT_PROCESSOR)
-    implementation(Deps.VIEWMODEL_INJECT)
-    kapt(Deps.VIEWMODEL_INJECT_PROCESSOR)
-    implementation(Deps.WORKER_INJECT)
-    kapt(Deps.WORKER_INJECT_PROCESSOR)
+    implementation(Deps.HILT)
+    kapt(Deps.HILT_COMPILER)
+    implementation(Deps.ANDROIDX_HILT_VIEWMODEL)
+    implementation(Deps.ANDROIDX_HILT_WORK)
+    kapt(Deps.ANDROIDX_HILT_COMPILER)
 
     // === Android Architecture Components ===
     implementation(Deps.ARCH_LIFECYCLE_EXT)
